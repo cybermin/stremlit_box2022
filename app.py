@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from datetime import datetime
+#from datetime import datetime
 
 # Using "with" notation
 with st.sidebar:
-    dt_now = datetime.today()
+    #dt_now = datetime.today()
     
     d = st.date_input(
      "날짜를 선택하세요.",
