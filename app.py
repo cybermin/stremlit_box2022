@@ -9,7 +9,7 @@ import datetime
 def box(targetDt) :
   apikey = 'f5eef3421c602c6cb7ea224104795888'  
   targetDt = targetDt.replave('-', '')
-   
+
   url = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?'
   url = url + 'key=' + apikey 
   url = url + '&targetDt=' + targetDt
@@ -34,7 +34,7 @@ def box(targetDt) :
   return lines
 
 
-st.write(box(d))
+st.write(box('2022-08-09'))
 
 # Using "with" notation
 with st.sidebar:
