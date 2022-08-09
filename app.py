@@ -8,7 +8,7 @@ import datetime
 #박스오피스 함수
 def box(targetDt) :
   apikey = 'f5eef3421c602c6cb7ea224104795888'  
-  targetDt = targetDt.replave('-', '')
+  targetDt = targetDt.replace('-', '')
 
   url = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?'
   url = url + 'key=' + apikey 
