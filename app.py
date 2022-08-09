@@ -41,6 +41,7 @@ def box(targetDt) :
     line.append(salesAmt)
     line.append(audiCnt)
 
+    line = pd.DataFrame(line)
     df.append(line)
       
   return df
