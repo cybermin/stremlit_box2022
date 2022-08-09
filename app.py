@@ -26,7 +26,6 @@ def box(targetDt) :
 
   df = pd.DataFrame()
 
-  
   for item in dailyBoxOfficeList :
     line = []
     #일자,순위,영화제목,매출액,관객수
@@ -42,7 +41,7 @@ def box(targetDt) :
     line.append(salesAmt)
     line.append(audiCnt)
 
-    df.loc(line)
+    df.append(line)
       
   return df
 
