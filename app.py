@@ -28,7 +28,7 @@ def box(targetDt) :
 
   
   for item in dailyBoxOfficeList :
-     line = []
+    line = []
     #일자,순위,영화제목,매출액,관객수
     #showRange,rank,movieNm,salesAmt,audiCnt
     rank = item['rank']
