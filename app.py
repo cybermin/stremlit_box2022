@@ -26,9 +26,9 @@ def box(targetDt) :
 
   df = pd.DataFrame()
 
-  line = []
   
   for item in dailyBoxOfficeList :
+     line = []
     #일자,순위,영화제목,매출액,관객수
     #showRange,rank,movieNm,salesAmt,audiCnt
     rank = item['rank']
