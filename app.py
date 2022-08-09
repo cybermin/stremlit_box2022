@@ -23,7 +23,11 @@ def box(targetDt) :
   dailyBoxOfficeList = data['boxOfficeResult']['dailyBoxOfficeList']
   
   showRange = data['boxOfficeResult']['showRange'][:8]
-  lines = ''
+
+  df = pd.DataFrame()
+
+  line = []
+  
   for item in dailyBoxOfficeList :
     #일자,순위,영화제목,매출액,관객수
     #showRange,rank,movieNm,salesAmt,audiCnt
@@ -31,10 +35,16 @@ def box(targetDt) :
     movieNm = item['movieNm']
     salesAmt = item['salesAmt']
     audiCnt = item['audiCnt']
-    line = f'{showRange},{rank},{movieNm},{salesAmt},{audiCnt}\n'
-    lines = lines + line
-  
-  return lines
+
+    line.append(showRange)
+    line.append(rank)
+    line.append(movieNm)
+    line.append(salesAmt)
+    line.append(audiCnt)
+
+    df.loc(line)
+      
+  return df
 
 
 st.write(box('2022-08-09'))
