@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 from urllib.request import Request, urlopen
 import json  
@@ -77,7 +77,7 @@ df1 = df_box[['영화제목', '매출액']].set_index('영화제목')
 st.bar_chart(df1, width=500, height=500)
 
 
-fig, ax = plt.subplots()
-ax.barh(df_box['매출액'])
+#fig, ax = plt.subplots()
+#ax.barh(df_box['매출액'])
 
-st.pyplot(fig)
+#st.pyplot(fig)
