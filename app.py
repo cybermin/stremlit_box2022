@@ -63,4 +63,4 @@ with st.sidebar:
 
 
 
-st.write(type(d))
+st.write(type(str(d)))
