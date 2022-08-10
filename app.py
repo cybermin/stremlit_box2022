@@ -24,7 +24,7 @@ def box(targetDt) :
   
   showRange = data['boxOfficeResult']['showRange'][:8]
 
-  df = pd.DataFrame(columns=['일자','순위','영화제목','매출액','관객수'])
+  df = pd.DataFrame(columns={'일자','순위','영화제목','매출액','관객수'})
 
   for item in dailyBoxOfficeList :
     
@@ -47,7 +47,8 @@ def box(targetDt) :
     else : idx = idx + 1
 
     df.loc[idx] = line
-   
+      
+  df.columns = ['일자','순위','영화제목','매출액','관객수']
   return df
 
 
@@ -63,4 +64,5 @@ with st.sidebar:
 
 
 df_box = box(str(d))
-df_box = df_box[['']]
+df_box = df_box[['순위','영화제목','매출액','관객수']]
+st.dataframe(df_box)
