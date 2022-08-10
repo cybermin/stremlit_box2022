@@ -67,6 +67,7 @@ with st.sidebar:
     st.write('선택날짜:', d)
 
 
+st.title(f'일일박스 오피스 ({d})')
 df_box = box(str(d))
 df_box = df_box[['순위','영화제목','매출액','관객수']]
 
