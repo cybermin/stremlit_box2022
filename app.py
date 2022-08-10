@@ -51,8 +51,6 @@ def box(targetDt) :
   return df
 
 
-st.write(box(d))
-
 # Using "with" notation
 with st.sidebar:
     dt_now = datetime.datetime.today()
@@ -62,3 +60,7 @@ with st.sidebar:
     datetime.date(dt_now.year, dt_now.month, dt_now.day))
 
     st.write('선택날짜:', d)
+
+
+
+st.write(box(d))
