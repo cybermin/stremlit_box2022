@@ -71,5 +71,4 @@ df_box = df_box[['순위','영화제목','매출액','관객수']]
 
 st.dataframe(df_box)
 
-
-st.bar_chart(df_box[['영화제목', '매출액']])
+st.line_chart(df_box[['영화제목', '매출액']]) 
