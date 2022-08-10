@@ -51,7 +51,7 @@ def box(targetDt) :
   return df
 
 
-st.write(box('2022-08-09'))
+st.write(box(d))
 
 # Using "with" notation
 with st.sidebar:
