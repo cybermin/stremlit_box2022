@@ -75,10 +75,11 @@ df_box = df_box[['순위','영화제목','매출액','관객수']]
 
 st.dataframe(df_box)
 
-df1 = df_box[['영화제목', '매출액','관객수']].set_index('영화제목')
-
+df1 = df_box[['영화제목', '매출액']].set_index('영화제목')
 st.bar_chart(df1, width=500, height=500)
 
+df2 = df_box[['영화제목', '관객수']].set_index('영화제목')
+st.line_chart(df2, width=500, height=500)
 
 #fig, ax = plt.subplots()
 #ax.barh(df_box['매출액'])
