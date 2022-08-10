@@ -62,5 +62,4 @@ with st.sidebar:
     st.write('선택날짜:', d)
 
 
-
-st.write(box(d))
+st.write(box(str(d)))
