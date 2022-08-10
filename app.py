@@ -24,9 +24,10 @@ def box(targetDt) :
   
   showRange = data['boxOfficeResult']['showRange'][:8]
 
-  df = pd.DataFrame()
+  df = pd.DataFrame(columns={'일자','순위','영화제목','매출액','관객수'})
 
   for item in dailyBoxOfficeList :
+    
     line = []
     #일자,순위,영화제목,매출액,관객수
     #showRange,rank,movieNm,salesAmt,audiCnt
@@ -41,8 +42,11 @@ def box(targetDt) :
     line.append(salesAmt)
     line.append(audiCnt)
 
-    line = pd.DataFrame(line)
-    df.append(line)
+    idx = df.index.max()
+    if np.isnan(idx): idx = 0
+    else : idx = idx + 1
+
+    df.loc[idx] = line
       
   return df
 
