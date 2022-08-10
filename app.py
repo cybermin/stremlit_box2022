@@ -49,6 +49,9 @@ def box(targetDt) :
     df.loc[idx] = line
       
   df.columns = ['일자','순위','영화제목','매출액','관객수']
+  df['매출액'] = df['매출액'].astype('int')
+  df['관객수'] = df['관객수'].astype('int')
+  
   return df
 
 
