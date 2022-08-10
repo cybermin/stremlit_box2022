@@ -51,7 +51,7 @@ def box(targetDt) :
   df.columns = ['일자','순위','영화제목','매출액','관객수']
   df['매출액'] = df['매출액'].astype('int')
   df['관객수'] = df['관객수'].astype('int')
-  
+
   return df
 
 
@@ -71,4 +71,4 @@ df_box = df_box[['순위','영화제목','매출액','관객수']]
 
 st.dataframe(df_box)
 
-st.bar_chart(df_box)
+#st.bar_chart(df_box)
