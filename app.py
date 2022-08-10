@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 from urllib.request import Request, urlopen
 import json  
  
 import datetime
-import matplotlib.pyplot as plt
+
 
 #박스오피스 함수
 def box(targetDt) :
